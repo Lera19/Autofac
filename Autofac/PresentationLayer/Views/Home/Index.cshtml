@@ -1,0 +1,23 @@
+﻿@model PresentationLayer.Models.GetAllAnimalsViewModel 
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>List Animals</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var animals in Model.Animals)
+        {
+        <tr>
+            <td>@animals.Id</td>
+            <td>@animals.Name</td>
+        </tr>
+        }
+    </tbody>
+</table>
